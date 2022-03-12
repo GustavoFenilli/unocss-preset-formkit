@@ -10,7 +10,7 @@ const presetFormKit = (): Preset => {
         if (match) {
           return {
             matcher: matcher.slice(match[0].length),
-            selector: s => `[data-${match[1]}] ${s}`
+            selector: s => `[data-${match[1]}] ${s}, [data-${match[1]}]${s}`
           }
         }
       },
@@ -20,7 +20,7 @@ const presetFormKit = (): Preset => {
         if (match)
           return {
             matcher: matcher.slice(match[0].length),
-            selector: s => `[data-message-type="${match[1]}"] ${s}`
+            selector: s => `[data-message-type="${match[1]}"] ${s}, [data-message-type="${match[1]}"]${s}`
           }
       }
     ]
