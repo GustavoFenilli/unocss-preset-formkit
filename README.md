@@ -1,11 +1,36 @@
-# Vue 3 + Typescript + Vite
+# unocss-preset-formkit
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A UnoCSS preset for [FormKit](https://github.com/formkit/formkit) variants.
 
-## Recommended IDE Setup
+> Checkout [UnoCSS](https://github.com/unocss/unocss) for instructions on installation and usage
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Installation
 
-## Type Support For `.vue` Imports in TS
+```bash
+npm i -D unocss-preset-formkit
+```
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+```ts
+import presetFormKit from 'unocss-preset-formkit'
+
+Unocss({
+  presets: [
+    presetFormKit(),
+  ],
+})
+```
+
+## Usages
+
+This preset adds [FormKit](https://formkit.com/essentials/styling#outer-attributes) attributes for styling using UnoCSS.
+
+For example, you can use `formkit-disabled:gray`, `formkit-invalid:red`.
+
+```css
+[data-disabled] .formkit-disabled:\gray { text-color: gray }
+[data-invalid] .formkit-invalid:\red { text-color: red }
+```
+
+## License
+
+MIT License © 2022-PRESENT [Gustavo Fenilli](https://github.com/gustavofenilli/)
