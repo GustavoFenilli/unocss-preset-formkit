@@ -1,0 +1,42 @@
+{
+  "name": "unocss-preset-formkit",
+  "version": "0.1.0",
+  "description": "A UnoCSS preset for FormKit variants.",
+  "keywords": [
+    "formkit",
+    "variants",
+    "unocss",
+    "unocss-preset"
+  ],
+  "homepage": "https://github.com/gustavofenilli/unocss-preset-formkit/tree/main#readme",
+  "bugs": "https://github.com/gustavofenilli/unocss-preset-formkit/issues",
+  "repository": "https://github.com/gustavofenilli/unocss-preset-formkit",
+  "license": "MIT",
+  "author": "Gustavo Fenilli <gustavofenilli@gmail.com> (https://github.com/gustavofenilli/)",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.umd.js",
+      "import": "./dist/index.es.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build"
+  },
+  "devDependencies": {
+    "@formkit/vue": "^1.0.0-beta.6",
+    "@types/node": "^17.0.21",
+    "@unocss/preset-uno": "^0.28.0",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "typescript": "^4.5.4",
+    "unocss": "^0.28.0",
+    "vite": "^2.8.0",
+    "vue": "^3.2.25",
+    "vue-tsc": "^0.29.8"
+  }
+}
